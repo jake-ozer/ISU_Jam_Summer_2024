@@ -8,7 +8,7 @@ public class Ingredient : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.Log("You touched " + type.ingredientName);
+        //Debug.Log("You touched " + type.ingredientName);
         FindObjectOfType<IngredientManager>().UpdateIngredientHeld(type);
     }
 }

@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public float speed;
+    public float gravity = -9.81f;
     private CharacterController controller;
+    private Vector3 velocity;
 
     private void Start()
     {
@@ -21,5 +23,8 @@ public class PlayerMove : MonoBehaviour
         movement = Camera.main.transform.TransformDirection(movement);
         movement.y = 0f;
         controller.Move(movement * speed * Time.deltaTime);
+
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
     }
 }
