@@ -25,6 +25,7 @@ public class PlayerInteract : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && hitInfo.collider.gameObject.GetComponent<Interactable>() != null)
             {
                 Debug.Log("You touched something interactable");
+                hitInfo.collider.gameObject.GetComponent<Interactable>().Interact();
             }
         }
     }
