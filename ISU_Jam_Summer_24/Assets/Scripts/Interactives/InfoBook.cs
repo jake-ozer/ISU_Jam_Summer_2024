@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class InfoBook : MonoBehaviour, IInteractable
 {
-    public bool canInteract => true;
+    public bool canInteract => interactable;
     public Transform bookViewCamSpot;
     public GameObject playerObject;
     public GameObject crosshair;
+    public GameObject bookControls;
     private Vector3 startPos;
     private Quaternion startRot;
     private bool inBookView = false;
+    private bool interactable = false;
 
     //lerping movement
     public float lerpSpeed;
@@ -24,10 +26,19 @@ public class InfoBook : MonoBehaviour, IInteractable
     private void Update()
     {
         //exit book view
-        if (inBookView && Input.GetKeyDown(KeyCode.Space))
+        /*if (inBookView && Input.GetKeyDown(KeyCode.Space))
         {
             ExitBookView();
             inBookView = false;
+        }*/
+
+        if(FindObjectOfType<PickupManager>().curItem != null)
+        {
+            interactable = false;
+        }
+        else
+        {
+            interactable = true;
         }
     }
 
@@ -37,22 +48,18 @@ public class InfoBook : MonoBehaviour, IInteractable
         Camera.main.GetComponent<PlayerCam>().enabled = false;
         playerObject.GetComponent<PlayerMove>().enabled = false;
         crosshair.SetActive(false);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
 
         startPos = Camera.main.transform.position;
         startRot = Camera.main.transform.rotation;
         StartCoroutine("LerpToPos");
     }
 
-    private void ExitBookView()
+    public void ExitBookView()
     {
         StartCoroutine("LerpToStart");
-        Camera.main.GetComponent<PlayerCam>().enabled = true;
-        playerObject.GetComponent<PlayerMove>().enabled = true;
-        crosshair.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        inBookView = false;
     }
 
     private IEnumerator LerpToPos()
@@ -66,10 +73,15 @@ public class InfoBook : MonoBehaviour, IInteractable
             Camera.main.transform.rotation = Quaternion.Lerp(startRot, bookViewCamSpot.rotation, lerpFactor);
             yield return null;
         }
+        bookControls.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     private IEnumerator LerpToStart()
     {
+        bookControls.SetActive(false);
+
         lerpFactor = 0f;
 
         while (lerpFactor < 1f)
@@ -79,5 +91,9 @@ public class InfoBook : MonoBehaviour, IInteractable
             Camera.main.transform.rotation = Quaternion.Lerp(bookViewCamSpot.rotation, startRot, lerpFactor);
             yield return null;
         }
+
+        Camera.main.GetComponent<PlayerCam>().enabled = true;
+        playerObject.GetComponent<PlayerMove>().enabled = true;
+        crosshair.SetActive(true);
     }
 }
