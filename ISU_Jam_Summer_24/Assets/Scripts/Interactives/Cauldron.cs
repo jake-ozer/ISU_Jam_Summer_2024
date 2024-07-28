@@ -8,6 +8,8 @@ public class Cauldron : MonoBehaviour, IInteractable
     public Transform bottleSpawn;
     private List<IngredientType> ingredients;
 
+    public bool canInteract { get => true; }
+
     private void Start()
     {
         ingredients = new List<IngredientType>();
@@ -15,17 +17,24 @@ public class Cauldron : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        //Debug.Log("You touched cauldron");
-        var curIngredient = FindObjectOfType<IngredientManager>().curIngredient;
-        if (curIngredient != null)
+        //flash interactivity back to normal after a second
+        Invoke("RestoreInteractivity", 0.78f);
+
+        //if ingredient, add it to pot, otherwise start boiling
+        if (FindObjectOfType<PickupManager>().curItem is Ingredient curIngredient)
         {
-            ingredients.Add(curIngredient);
-            FindObjectOfType<IngredientManager>().DropIngredient();
+            ingredients.Add(curIngredient.type);
+            FindObjectOfType<PickupManager>().DropItem();
         }
         else
         {
             BoilCauldron();
         }
+    }
+
+    private void RestoreInteractivity()
+    {
+        FindObjectOfType<PlayerInteract>().hasInteracted = false;
     }
 
     private void BoilCauldron()

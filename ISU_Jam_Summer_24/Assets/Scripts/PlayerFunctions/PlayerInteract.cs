@@ -9,7 +9,7 @@ public class PlayerInteract : MonoBehaviour
 
     private Camera cam;
     private GameObject currentHit;
-    
+    public bool hasInteracted = false;
 
     private void Start()
     {
@@ -27,7 +27,8 @@ public class PlayerInteract : MonoBehaviour
             //highlight
             if (Physics.Raycast(ray, out hitInfo, distance))
             {
-                if (hitObject.GetComponent<Outline>() != null && hitObject.GetComponent<IInteractable>() != null)
+                if (hitObject.GetComponent<Outline>() != null && hitObject.GetComponent<IInteractable>() != null && 
+                    !hasInteracted && hitObject.GetComponent<IInteractable>().canInteract)
                 {
                     hitInfo.collider.gameObject.GetComponent<Outline>().enabled = true;
                     currentHit = hitInfo.collider.gameObject;
@@ -39,13 +40,15 @@ public class PlayerInteract : MonoBehaviour
             {
                 currentHit.GetComponent<Outline>().enabled = false;
                 currentHit = null;
+                hasInteracted = false;
             }
             
             //click to interact
-            if (Input.GetMouseButtonDown(0) && hitObject.GetComponent<IInteractable>() != null)
+            if (Input.GetMouseButtonDown(0) && hitObject.GetComponent<IInteractable>() != null && !hasInteracted && hitObject.GetComponent<IInteractable>().canInteract)
             {
                 hitInfo.collider.gameObject.GetComponent<Outline>().enabled = false;
                 hitInfo.collider.gameObject.GetComponent<IInteractable>().Interact();
+                hasInteracted = true;
             }
         }
     }

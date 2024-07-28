@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PoisonBottle : MonoBehaviour, IInteractable
+public class PoisonBottle : MonoBehaviour, IInteractable, IPickup
 {
     private Transform playerHoldSpot;
+
+    public bool canInteract => true;
 
     private void Awake()
     {
@@ -16,5 +18,6 @@ public class PoisonBottle : MonoBehaviour, IInteractable
         //have player hold poison bottle
         transform.position = playerHoldSpot.position;
         transform.parent = playerHoldSpot;
+        FindObjectOfType<PickupManager>().UpdateItemHeld(this);
     }
 }
