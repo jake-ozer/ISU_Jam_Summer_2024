@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
@@ -10,6 +11,8 @@ public class PlayerInteract : MonoBehaviour
     private Camera cam;
     private GameObject currentHit;
     public bool hasInteracted = false;
+    public GameObject cauldronMenu;
+    public GameObject ingredientLabel;
 
     private void Start()
     {
@@ -32,6 +35,26 @@ public class PlayerInteract : MonoBehaviour
                 {
                     hitInfo.collider.gameObject.GetComponent<Outline>().enabled = true;
                     currentHit = hitInfo.collider.gameObject;
+                    //enable cauldron menu
+                    if(hitObject.GetComponent<Cauldron>())
+                    {
+                        cauldronMenu.SetActive(true);
+                    }
+                    else
+                    {
+                        cauldronMenu.SetActive(false);
+                    }
+
+                    //enable ingredient label
+                    if (hitObject.GetComponent<Ingredient>())
+                    {
+                        ingredientLabel.GetComponent<TextMeshProUGUI>().text = hitObject.GetComponent<Ingredient>().type.ingredientName;
+                        ingredientLabel.SetActive(true);
+                    }
+                    else
+                    {
+                        ingredientLabel.SetActive(false);
+                    }
                 }
             }
 
@@ -41,6 +64,8 @@ public class PlayerInteract : MonoBehaviour
                 currentHit.GetComponent<Outline>().enabled = false;
                 currentHit = null;
                 hasInteracted = false;
+                cauldronMenu.SetActive(false);
+                ingredientLabel.SetActive(false);
             }
             
             //click to interact
@@ -49,6 +74,7 @@ public class PlayerInteract : MonoBehaviour
                 hitInfo.collider.gameObject.GetComponent<Outline>().enabled = false;
                 hitInfo.collider.gameObject.GetComponent<IInteractable>().Interact();
                 hasInteracted = true;
+                ingredientLabel.SetActive(false);
             }
         }
     }

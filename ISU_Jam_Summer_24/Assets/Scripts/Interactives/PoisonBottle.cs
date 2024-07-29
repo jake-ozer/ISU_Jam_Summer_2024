@@ -18,6 +18,7 @@ public class PoisonBottle : MonoBehaviour, IInteractable, IPickup
         //have player hold poison bottle
         transform.position = playerHoldSpot.position;
         transform.parent = playerHoldSpot;
+        GetComponent<Animator>().enabled = false;
         FindObjectOfType<PickupManager>().UpdateItemHeld(this);
     }
 }

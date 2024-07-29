@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 6132965238319229319}
   - component: {fileID: 6132965238319229312}
   - component: {fileID: 6132965238319229318}
+  - component: {fileID: 9079213878798587571}
   m_Layer: 0
   m_Name: Poison
   m_TagString: Untagged
@@ -401,7 +402,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330f2c1b5fe2ae1429551c814545e5df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHoldSpot: {fileID: 0}
+--- !u!95 &9079213878798587571
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798038293329376056}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f9874437bf5186c4ea7619806132c3af, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &7477231331051888054
 GameObject:
   m_ObjectHideFlags: 0

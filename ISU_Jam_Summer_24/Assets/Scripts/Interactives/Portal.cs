@@ -14,6 +14,7 @@ public class Portal : MonoBehaviour, IInteractable
         {
             //logic for submitting poison will go here
             pm.DropItem();
+            FindObjectOfType<Cauldron>().interactable = true;
         }
     }
 
