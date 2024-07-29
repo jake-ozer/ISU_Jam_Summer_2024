@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1462,9 +1462,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de19bce4296ecdc42b5809eb3699e6d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  validIngredients:
+  - {fileID: 11400000, guid: 051d28a570bb712449d5a9063feb456d, type: 2}
+  - {fileID: 11400000, guid: be31797d7b77be14f9a595a73e72bee9, type: 2}
+  - {fileID: 11400000, guid: 3b84531941e785b418481f42fa382943, type: 2}
+  - {fileID: 11400000, guid: 85937058539e16d4b96def9c298e99df, type: 2}
+  - {fileID: 11400000, guid: 250ce040b43ab324d847adf87f88aaf6, type: 2}
   validRecipes:
   - {fileID: 11400000, guid: c3be514e32af6f245bfce4505d7605d3, type: 2}
   - {fileID: 11400000, guid: c3ff8828670ad784380e857a36ee9ce8, type: 2}
+  testNums: 
 --- !u!4 &1100208914
 Transform:
   m_ObjectHideFlags: 0

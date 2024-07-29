@@ -7,12 +7,14 @@ public class Cauldron : MonoBehaviour, IInteractable
     public GameObject poisonBottle;
     public Transform bottleSpawn;
     private List<IngredientType> ingredients;
+    private List<IngredientType> brewParts; //This list stores what the cauldron current has in it for adding future stuff
 
     public bool canInteract { get => true; }
 
     private void Start()
     {
         ingredients = new List<IngredientType>();
+        brewParts = new List<IngredientType>();
     }
 
     public void Interact()
@@ -24,6 +26,7 @@ public class Cauldron : MonoBehaviour, IInteractable
         if (FindObjectOfType<PickupManager>().curItem is Ingredient curIngredient)
         {
             ingredients.Add(curIngredient.type);
+            updateBrewEffects(curIngredient.type);
             FindObjectOfType<PickupManager>().DropItem();
         }
         else
@@ -55,5 +58,29 @@ public class Cauldron : MonoBehaviour, IInteractable
     private void EmptyCauldron()
     {
         ingredients.Clear();
+    }
+
+    //checks to see what should be combined and then repaces them out with the output effect
+    private void updateBrewEffects(IngredientType input)
+    {
+        RecipeManager recipeMan = FindObjectOfType<RecipeManager>();
+        int i = 0;
+        bool addTo = true;
+        while(i<brewParts.Count && addTo)
+        {
+            if(recipeMan.getMatchable(input,brewParts[i]))
+            {
+                addTo = false;
+                IngredientType otherPart = brewParts[i];
+                brewParts.Remove(otherPart);
+                brewParts.Add(recipeMan.returnEffectItem(new List<IngredientType>{input,otherPart}));
+            }
+            i+=1;
+        }
+        if(addTo)
+        {
+            brewParts.Add(input);
+        }
+        Debug.Log("You added " + brewParts[brewParts.Count-1].ingredientName);
     }
 }
