@@ -1468,9 +1468,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3b84531941e785b418481f42fa382943, type: 2}
   - {fileID: 11400000, guid: 85937058539e16d4b96def9c298e99df, type: 2}
   - {fileID: 11400000, guid: 250ce040b43ab324d847adf87f88aaf6, type: 2}
+  - {fileID: 11400000, guid: 8953d171abce0714a9782b6d1a930d1e, type: 2}
+  - {fileID: 11400000, guid: 662bf860568271a4cafd2c1c9d3ad38e, type: 2}
   validRecipes:
   - {fileID: 11400000, guid: c3be514e32af6f245bfce4505d7605d3, type: 2}
   - {fileID: 11400000, guid: c3ff8828670ad784380e857a36ee9ce8, type: 2}
+  - {fileID: 11400000, guid: 03bb94e732b9dc74782e83c8765b453e, type: 2}
+  - {fileID: 11400000, guid: 58078bac84999cf4d9bfb248d8591e9c, type: 2}
   testNums: 
 --- !u!4 &1100208914
 Transform:

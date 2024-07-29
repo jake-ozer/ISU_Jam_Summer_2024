@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c22a49892347d2b43af62f22e243ac73, type: 3}
-  m_Name: Sleep
+  m_Name: Awake
   m_EditorClassIdentifier: 
-  ingredientName: Sleep
-  description: NOTFORBOOK
+  ingredientName: Awake
+  description: DO NOt ADD TO BOOK
   img: {fileID: 0}
-  indexNum: 4
+  indexNum: 6
   isEffect: 1

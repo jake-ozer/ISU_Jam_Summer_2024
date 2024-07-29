@@ -90,4 +90,30 @@ public class RecipeManager : MonoBehaviour
         }
         return null;
     }
+
+    //Gives what the potion actually does
+    public List<IngredientType> getPoisonEffects(List<IngredientType> poisonBrew)
+    {
+        List<IngredientType> totalEffects = new List<IngredientType>{};
+        foreach(IngredientType effect in poisonBrew)
+        {
+            if(effect.isEffect)
+            {
+                totalEffects.Add(effect);
+            }
+        }
+        string testmessage = "A ";
+        foreach(IngredientType effect in totalEffects)
+        {
+            testmessage += effect.ingredientName + " ";
+        }
+        testmessage += "Poison";
+        Debug.Log(testmessage);
+        return totalEffects;
+    }
+
+    public List<IngredientType> getMatchList(int indexNum)
+    {
+        return IngredientMatches[indexNum];
+    }
 }

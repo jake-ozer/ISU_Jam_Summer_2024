@@ -43,7 +43,7 @@ public class Cauldron : MonoBehaviour, IInteractable
     private void BoilCauldron()
     {
         //check if ingredients in cauldron do make a poison
-        PoisonRecipe curRecipe = FindObjectOfType<RecipeManager>().ValidateRecipe(ingredients);
+        /*PoisonRecipe curRecipe = FindObjectOfType<RecipeManager>().ValidateRecipe(ingredients);
         if (curRecipe != null)
         {
             Instantiate(poisonBottle, bottleSpawn);
@@ -51,6 +51,12 @@ public class Cauldron : MonoBehaviour, IInteractable
         else
         {
             Debug.Log("You did not make a poison with a predefined recipe.");
+        }*/
+        //Now will make potion of anything
+        if(ingredients.Count!=0)
+        {
+            Instantiate(poisonBottle, bottleSpawn);
+            FindObjectOfType<RecipeManager>().getPoisonEffects(brewParts);
         }
         EmptyCauldron();
     }
@@ -58,6 +64,7 @@ public class Cauldron : MonoBehaviour, IInteractable
     private void EmptyCauldron()
     {
         ingredients.Clear();
+        brewParts.Clear();
     }
 
     //checks to see what should be combined and then repaces them out with the output effect
@@ -77,7 +84,45 @@ public class Cauldron : MonoBehaviour, IInteractable
             }
             i+=1;
         }
-        if(addTo)
+        //This half checks again for more complex combinations
+        if(!addTo)
+        {
+            bool stoppedCombining = false;
+            IngredientType lastCombo = brewParts[brewParts.Count-1];
+            while(!stoppedCombining)
+            {
+                if(recipeMan.getMatchList(lastCombo.indexNum).Count!=0)
+                {
+                    i=0;
+                    bool unFin = true;
+                    while(i<brewParts.Count && unFin)
+                    {
+                        if(recipeMan.getMatchable(lastCombo,brewParts[i]))
+                        {   
+                            unFin = false;
+                            IngredientType otherPart = brewParts[i];
+                            brewParts.Remove(otherPart);
+                            brewParts.Remove(lastCombo);
+                            brewParts.Add(recipeMan.returnEffectItem(new List<IngredientType>{lastCombo,otherPart}));
+                            lastCombo = brewParts[brewParts.Count-1];
+                        }
+                        i+=1;
+                    }
+
+                    if(unFin)
+                    {
+                        stoppedCombining = true;
+                    }
+                }
+                else
+                {
+                    stoppedCombining = true;
+                }
+            }
+        }
+
+        //If it made it through just add the ingredient
+        else
         {
             brewParts.Add(input);
         }

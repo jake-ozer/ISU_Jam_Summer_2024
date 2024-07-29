@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d1010e0ad99f774ba55613fafb75618, type: 3}
-  m_Name: SleepPoison
+  m_Name: HealPotion
   m_EditorClassIdentifier: 
-  poisonName: Sleep Poison
-  description: it makes you go zzzzz
+  poisonName: Healing
+  description: Heals your foes (Oh no)
   ingredientList:
+  - {fileID: 11400000, guid: 051d28a570bb712449d5a9063feb456d, type: 2}
   - {fileID: 11400000, guid: be31797d7b77be14f9a595a73e72bee9, type: 2}
-  - {fileID: 11400000, guid: 85937058539e16d4b96def9c298e99df, type: 2}
-  effectIngredient: {fileID: 11400000, guid: 250ce040b43ab324d847adf87f88aaf6, type: 2}
+  effectIngredient: {fileID: 11400000, guid: 8953d171abce0714a9782b6d1a930d1e, type: 2}
