@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Wolfsbane
   description: wolfsbane??? idk
+  img: {fileID: 21300000, guid: 42ef94dadd4f2224e914b9f1488cb162, type: 3}

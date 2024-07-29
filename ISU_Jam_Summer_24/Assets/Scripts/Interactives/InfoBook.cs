@@ -25,13 +25,6 @@ public class InfoBook : MonoBehaviour, IInteractable
 
     private void Update()
     {
-        //exit book view
-        /*if (inBookView && Input.GetKeyDown(KeyCode.Space))
-        {
-            ExitBookView();
-            inBookView = false;
-        }*/
-
         if(FindObjectOfType<PickupManager>().curItem != null)
         {
             interactable = false;
@@ -47,10 +40,13 @@ public class InfoBook : MonoBehaviour, IInteractable
         inBookView = true;
         Camera.main.GetComponent<PlayerCam>().enabled = false;
         playerObject.GetComponent<PlayerMove>().enabled = false;
+        playerObject.GetComponent<PlayerInteract>().enabled = false;
         crosshair.SetActive(false);
+        interactable = false;
 
         startPos = Camera.main.transform.position;
         startRot = Camera.main.transform.rotation;
+
         StartCoroutine("LerpToPos");
     }
 
@@ -94,6 +90,8 @@ public class InfoBook : MonoBehaviour, IInteractable
 
         Camera.main.GetComponent<PlayerCam>().enabled = true;
         playerObject.GetComponent<PlayerMove>().enabled = true;
+        playerObject.GetComponent<PlayerInteract>().enabled = true;
         crosshair.SetActive(true);
+        interactable = false;
     }
 }

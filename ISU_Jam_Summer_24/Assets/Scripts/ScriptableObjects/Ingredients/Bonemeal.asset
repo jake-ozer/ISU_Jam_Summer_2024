@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Bonemeal
   description: its bones
+  img: {fileID: 21300000, guid: c6306bf203550584b805c9cc431d47d9, type: 3}

@@ -1,28 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BookManager : MonoBehaviour
 {
     public List<IngredientType> pageContents;
     //UI References
-    public GameObject pageOneParent;
-    public GameObject pageTwoParent;
+    //page one
+    public TextMeshProUGUI pageOneTitle;
+    public TextMeshProUGUI pageOneText;
+    public TextMeshProUGUI pageOneNumber;
+    public Image pageOneImg;
+    //page two
+    public TextMeshProUGUI pageTwoTitle;
+    public TextMeshProUGUI pageTwoText;
+    public TextMeshProUGUI pageTwoNumber;
+    public Image pageTwoImg;
 
-    private void Start()
+    //page trackers
+    private int curPairIndex = 0;
+
+    private void Update()
     {
-        //load initial two pages
-        pageOneParent.transform.GetChild(0).gameObject.SetActive(false);
+        //page one
+        pageOneTitle.text = pageContents[curPairIndex].ingredientName;
+        pageOneText.text = pageContents[curPairIndex].description;
+        int pageOneNum = curPairIndex + 1;
+        pageOneNumber.text = (pageOneNum).ToString();
+        pageOneImg.sprite = pageContents[curPairIndex].img;
+        //page two
+        pageTwoTitle.text = pageContents[curPairIndex+1].ingredientName;
+        pageTwoText.text = pageContents[curPairIndex+1].description;
+        int pageTwoNum = curPairIndex + 2;
+        pageTwoNumber.text = (pageTwoNum).ToString();
+        pageTwoImg.sprite = pageContents[curPairIndex+1].img;
     }
 
     public void PageRight()
     {
-
+        if(curPairIndex < pageContents.Count - 2)
+        {
+            curPairIndex += 2;
+        }
     }
 
     public void PageLeft() 
     {
-        
+        if(curPairIndex >= 2)
+        {
+            curPairIndex -= 2;
+        }
     }
 
 }
