@@ -8,6 +8,7 @@ public class Cauldron : MonoBehaviour, IInteractable
     public Transform bottleSpawn;
     private List<IngredientType> ingredients;
     private List<IngredientType> brewParts; //This list stores what the cauldron current has in it for adding future stuff
+    private List<IngredientType> finalEffects;
 
     public bool canInteract { get => true; }
 
@@ -56,7 +57,7 @@ public class Cauldron : MonoBehaviour, IInteractable
         if(ingredients.Count!=0)
         {
             Instantiate(poisonBottle, bottleSpawn);
-            FindObjectOfType<RecipeManager>().getPoisonEffects(brewParts);
+            finalEffects = FindObjectOfType<RecipeManager>().getPoisonEffects(brewParts);
         }
         EmptyCauldron();
     }
@@ -127,5 +128,15 @@ public class Cauldron : MonoBehaviour, IInteractable
             brewParts.Add(input);
         }
         Debug.Log("You added " + brewParts[brewParts.Count-1].ingredientName);
+    }
+
+    public List<IngredientType> getFinalEffects()
+    {
+        return this.finalEffects;
+    }
+
+    public void resetEffects()
+    {
+        finalEffects = new List<IngredientType>{};
     }
 }

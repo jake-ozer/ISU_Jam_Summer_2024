@@ -116,4 +116,13 @@ public class RecipeManager : MonoBehaviour
     {
         return IngredientMatches[indexNum];
     }
+
+    public List<IngredientType> getIngredients()
+    {
+        return this.validIngredients;
+    }
+    public List<PoisonRecipe> getRecipes()
+    {
+        return this.validRecipes;
+    }
 }
