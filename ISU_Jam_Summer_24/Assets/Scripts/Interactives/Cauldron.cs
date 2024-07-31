@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Cauldron : MonoBehaviour, IInteractable
@@ -10,12 +11,20 @@ public class Cauldron : MonoBehaviour, IInteractable
     private List<IngredientType> brewParts; //This list stores what the cauldron current has in it for adding future stuff
     private List<IngredientType> finalEffects;
 
-    public bool canInteract { get => true; }
+    //cauldron UI elements
+    public GameObject menuBack;
+    public GameObject ingTextPrefab;
+    private List<GameObject> uiDestroyList;
+
+
+    public bool canInteract { get => interactable; }
+    public bool interactable = true;
 
     private void Start()
     {
         ingredients = new List<IngredientType>();
         brewParts = new List<IngredientType>();
+        uiDestroyList = new List<GameObject>();
     }
 
     public void Interact()
@@ -27,6 +36,11 @@ public class Cauldron : MonoBehaviour, IInteractable
         if (FindObjectOfType<PickupManager>().curItem is Ingredient curIngredient)
         {
             ingredients.Add(curIngredient.type);
+            ingredients.Add(curIngredient.type);
+            var ingText = Instantiate(ingTextPrefab);
+            ingText.GetComponent<TextMeshProUGUI>().text = curIngredient.type.ingredientName;
+            ingText.transform.parent = menuBack.transform;
+            uiDestroyList.Add(ingText);
             updateBrewEffects(curIngredient.type);
             FindObjectOfType<PickupManager>().DropItem();
         }
@@ -66,6 +80,11 @@ public class Cauldron : MonoBehaviour, IInteractable
     {
         ingredients.Clear();
         brewParts.Clear();
+        foreach (var go in uiDestroyList)
+        {
+            Destroy(go);
+        }
+
     }
 
     //checks to see what should be combined and then repaces them out with the output effect
