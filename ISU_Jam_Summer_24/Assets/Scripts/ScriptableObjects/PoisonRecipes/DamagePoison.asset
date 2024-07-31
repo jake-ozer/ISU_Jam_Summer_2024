@@ -15,5 +15,6 @@ MonoBehaviour:
   poisonName: Damage Poison
   description: hurts people idk
   ingredientList:
-  - {fileID: 11400000, guid: be31797d7b77be14f9a595a73e72bee9, type: 2}
+  - {fileID: 11400000, guid: 85937058539e16d4b96def9c298e99df, type: 2}
   - {fileID: 11400000, guid: 051d28a570bb712449d5a9063feb456d, type: 2}
+  effectIngredient: {fileID: 11400000, guid: d8f477fc3e98809489cbcdf38a913f52, type: 2}

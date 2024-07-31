@@ -13,6 +13,7 @@ public class Portal : MonoBehaviour, IInteractable
         if (pm.curItem is PoisonBottle)
         {
             //logic for submitting poison will go here
+            FindObjectOfType<OrderManager>().checkOrder();
             pm.DropItem();
             FindObjectOfType<Cauldron>().interactable = true;
         }
