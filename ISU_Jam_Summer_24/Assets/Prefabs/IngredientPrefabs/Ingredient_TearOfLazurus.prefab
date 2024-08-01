@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4300911312411552110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 22.8, z: 13.41}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: -1.4, y: 22.8, z: 13.5}
+  m_LocalScale: {x: 24, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7872552624280991038}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c6306bf203550584b805c9cc431d47d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b25e6481d26bc34984ae385b0acf264, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 6552516953999243934}
   - component: {fileID: 6552516953999243935}
   m_Layer: 0
-  m_Name: Ingredient_Bonemeal
+  m_Name: Ingredient_TearOfLazurus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f18b607e920834490042541bfdfa1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: {fileID: 11400000, guid: 051d28a570bb712449d5a9063feb456d, type: 2}
+  type: {fileID: 11400000, guid: 9c6a59f14875de243b2868a3e7bc5063, type: 2}
 --- !u!114 &6552516953999243935
 MonoBehaviour:
   m_ObjectHideFlags: 0
