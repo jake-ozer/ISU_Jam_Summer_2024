@@ -6,9 +6,9 @@ using TMPro;
 
 public class OrderManager : MonoBehaviour
 {
-    public List<IngredientType> effects;
-    public int level;
-    public List<IngredientType> order;
+    //public List<IngredientType> effects;
+    //public int level;
+    //public List<IngredientType> order;
     public TMP_Text orderGiven;
     public List<Order> orderSequence;
     private int curOrderIndex = 0;
@@ -16,7 +16,7 @@ public class OrderManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        order = new List<IngredientType>{};
+/*        order = new List<IngredientType>{};
         List<IngredientType> totalIng = FindObjectOfType<RecipeManager>().getIngredients();
         effects = new List<IngredientType>{};
         foreach(IngredientType effect in totalIng)
@@ -27,7 +27,7 @@ public class OrderManager : MonoBehaviour
                 effect.levelReq+=2;
             }
         }
-        level = 2;
+        level = 2;*/
     }
 
     // Update is called once per frame
@@ -41,7 +41,7 @@ public class OrderManager : MonoBehaviour
 
     public void getOrder()
     {
-        orderGiven.text = orderSequence[curOrderIndex].orderContent;
+        orderGiven.text = orderSequence[curOrderIndex].orderContent.Replace("\n", "\n");
 
        /* if(order.Count == 0)
         {
@@ -115,7 +115,7 @@ public class OrderManager : MonoBehaviour
         }
 
 
-        order = new List<IngredientType>{};
+        //order = new List<IngredientType>{};
         FindObjectOfType<Cauldron>().resetEffects();
     }
 }
