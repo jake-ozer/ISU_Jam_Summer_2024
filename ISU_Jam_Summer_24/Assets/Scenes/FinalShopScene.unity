@@ -15251,6 +15251,9 @@ MonoBehaviour:
   level: 0
   order: []
   orderGiven: {fileID: 1716707656}
+  orderSequence:
+  - {fileID: 11400000, guid: e8ebd65cda0d37142a2e23a4f0b500a3, type: 2}
+  - {fileID: 11400000, guid: 5b7c520d800204f4692621573f3c0fcb, type: 2}
 --- !u!4 &1270859218
 Transform:
   m_ObjectHideFlags: 0

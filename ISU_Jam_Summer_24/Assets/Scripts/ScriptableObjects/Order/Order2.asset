@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Order2
   m_EditorClassIdentifier: 
   desiredEffects:
-  - {fileID: 11400000, guid: 250ce040b43ab324d847adf87f88aaf6, type: 2}
-  orderContent: 'Hello esteemed alchemist, \nI have an urgent order for a poison
-    that must be done post-haste! My mother in law is to visit our estate in the
-    coming day, and I cannot bear to hear her spiel about her unequivocally mundane
-    trip to the coastal territories. Could you make something to put her to sleep
-    when she gets here? You must not kill her, my wife would be mortified. But for
-    the gods'' sake, something needs to be done. \nBest, \nA fatigued nobleman '
+  - {fileID: 11400000, guid: d8f477fc3e98809489cbcdf38a913f52, type: 2}
+  orderContent: 'Underground hermit,\n Rumors have been spreading of a local party
+    of dungeoneers pillaging local settlements. We are worried we are unprepared.
+    A village elder suggested we seek your services. We will not be able to face
+    them in a straight-up fight. We will try to persuade them to accept a courtesy
+    drink. Fill it with poison. We have lots of gold to offer.\n Best,\n Dungeon
+    Goblin '

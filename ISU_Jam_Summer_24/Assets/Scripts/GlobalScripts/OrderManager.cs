@@ -103,10 +103,11 @@ public class OrderManager : MonoBehaviour
     public void checkOrder()
     {
         List<IngredientType> potionEffectsIn = FindObjectOfType<Cauldron>().getFinalEffects();
-        if(order.All(i => potionEffectsIn.Contains(i)))
+        if (orderSequence[curOrderIndex].desiredEffects.All(i => potionEffectsIn.Contains(i)))
         {
             //level+=1;
             Debug.Log("Correct Poison");
+            curOrderIndex++;
         }
         else
         {
