@@ -15,6 +15,6 @@ MonoBehaviour:
   ingredientName: Heat
   description: Exothermic Reaction
   img: {fileID: 0}
-  indexNum: 0
-  isEffect: 1
+  indexNum: 23
+  isEffect: 0
   levelReq: 0
