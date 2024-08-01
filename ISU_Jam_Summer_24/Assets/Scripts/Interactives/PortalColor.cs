@@ -17,32 +17,28 @@ public class PortalColor : MonoBehaviour
         portalText.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CorrectPoisonAnim()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            redParticles.Play();
-            ShowPortalText(false);
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            greenParticles.Play();
-            ShowPortalText(true);
-        }
+        greenParticles.Play();
+        StartCoroutine(ShowPortalText(true));
+    }
+
+    public void IncorrectPoisonAnim()
+    {
+        redParticles.Play();
+        StartCoroutine(ShowPortalText(false));
     }
 
     private IEnumerator ShowPortalText(bool result)
     {
-        
         portalText.SetActive(true);
         if (result)
         {
-            portalText.GetComponent<TextMeshProUGUI>().text = "Recieved Favorably";
+            portalText.GetComponent<TextMeshProUGUI>().text = "Recieved Favorably.<br>Go to mailbox for a new order.";
         }
         else
         {
-            portalText.GetComponent<TextMeshProUGUI>().text = "Recieved Poorly";
+            portalText.GetComponent<TextMeshProUGUI>().text = "Recieved Poorly.<br>Try again with a better poison.";
         }
         yield return new WaitForSeconds(3);
         portalText.SetActive(false);
