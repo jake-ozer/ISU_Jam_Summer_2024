@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62abdca1e148304bbd20e85365bd8f6, type: 3}
+  m_Name: Order9
+  m_EditorClassIdentifier: 
+  desiredEffects:
+  - {fileID: 11400000, guid: 76bf39ddddfe9644c8d8a862dc1dee68, type: 2}
+  orderContent: "Salutations my fellow alchemist,<br><br>An unfortunate incident
+    occurred as I was experimenting with potions, and I have regrettably been turned
+    into a zombie. While my flesh has rotted, my brain has not, and the idea of eating
+    someone else\u2019s cerebellum is repulsive to me.<br><br>I was hoping you could
+    create a potion to satisfy my hunger, so that I might avoid resorting to cannibalism\u2026
+    I would make one myself, but I am hesitant to return to alchemy after what happened
+    the last time.<br><br>Best regards,<br>A hungry alchemist with much to learn "

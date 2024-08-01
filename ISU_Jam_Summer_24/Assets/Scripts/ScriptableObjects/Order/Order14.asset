@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62abdca1e148304bbd20e85365bd8f6, type: 3}
+  m_Name: Order14
+  m_EditorClassIdentifier: 
+  desiredEffects:
+  - {fileID: 11400000, guid: 48e5f8b329fa3784a9d8fea13ff3b392, type: 2}
+  orderContent: "Dear Alchemist,<br><br>You seem to be a bright, young artisan\u2026
+    What do you say we make a deal? I need a potion that allows me to control the
+    minds of inferior beings, so that I can amass an army of minions to take over
+    the world\u2026<br><br> In return, you can be one of my loyal underlings! Plus,
+    I\u2019ll let everyone know that your poisons allowed me to take over the world\u2014Everyone
+    will go flocking to your shop! And if they don\u2019t, I\u2019ll make them! What
+    do you say? I\u2019m looking forward to the opportunity to work with you!<br><br>Sincerely,<br>Your
+    future overlord "

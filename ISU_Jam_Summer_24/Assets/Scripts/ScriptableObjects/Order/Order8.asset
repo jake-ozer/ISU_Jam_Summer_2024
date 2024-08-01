@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62abdca1e148304bbd20e85365bd8f6, type: 3}
+  m_Name: Order8
+  m_EditorClassIdentifier: 
+  desiredEffects:
+  - {fileID: 11400000, guid: ce713590f1a5e3c48bf1ad1e2a0741c1, type: 2}
+  orderContent: 'Greetings Alchemist,<br><br>I am a reclusive countess living in
+    a grand yet empty castle, and I have found myself wandering the halls at night
+    as of late, wishing for company. I have decided that the best course of action
+    is to become a vampire, so that I may lure a curious and fair maiden to my estate
+    with my devilish charm and superhuman beauty.<br><br>Unfortunately, I do not
+    know any vampires who can turn me, as I do not have any friends. Perhaps a potion
+    would work instead?<br><br>Sincerely,<br>A Romanian romantic '

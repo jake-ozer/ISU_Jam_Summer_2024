@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62abdca1e148304bbd20e85365bd8f6, type: 3}
+  m_Name: Order10
+  m_EditorClassIdentifier: 
+  desiredEffects:
+  - {fileID: 11400000, guid: 8451e574bf3a55a43b8b2fdb55ec7b50, type: 2}
+  orderContent: "Alchemist,<br><br>You don\u2019t happen to have a potion that kills
+    the undead, do you? I may have been tampering with dark magic to bring back my
+    dead wife, and accidentally raised an army of zombies\u2026 Please send help,
+    and quickly. They might be dead already, but I\u2019m not!<br><br>Please hurry,<br>Not
+    a zombie (yet) "

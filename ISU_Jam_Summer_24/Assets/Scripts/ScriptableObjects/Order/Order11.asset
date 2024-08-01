@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62abdca1e148304bbd20e85365bd8f6, type: 3}
+  m_Name: Order11
+  m_EditorClassIdentifier: 
+  desiredEffects:
+  - {fileID: 11400000, guid: b60a0eb110b9bb04f8857d68b28c30bf, type: 2}
+  orderContent: "My dearest Alchemist,<br><br>How are you? It\u2019s been a long
+    time since I visited, and I\u2019ve missed your company\u2014But unfortunately,
+    I will have to delay my visit a bit longer. I\u2019ve been working on a big project\u2014a
+    machine that looks and acts like a human! It worked, but somehow, my creation
+    turned against me! I fear it has to go\u2026 <br><br>You know I don\u2019t believe
+    in any of that magic mumbo jumbo, but your concoctions do always seem to work
+    a treat. Could you make me something to melt the metal monstrosity down, please?
+    I can\u2019t leave my workshop with it ravaging the place.<br><br>Yours truly,<br>The
+    Architect"
