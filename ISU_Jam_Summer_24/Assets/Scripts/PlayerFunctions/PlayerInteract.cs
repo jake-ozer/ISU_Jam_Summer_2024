@@ -52,6 +52,11 @@ public class PlayerInteract : MonoBehaviour
                         ingredientLabel.GetComponent<TextMeshProUGUI>().text = hitObject.GetComponent<Ingredient>().type.ingredientName;
                         ingredientLabel.SetActive(true);
                     }
+                    else if (hitObject.GetComponent<TrashBarrel>())
+                    {
+                        ingredientLabel.GetComponent<TextMeshProUGUI>().text = "Click to discard poison";
+                        ingredientLabel.SetActive(true);
+                    }
                     else
                     {
                         ingredientLabel.SetActive(false);

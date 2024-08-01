@@ -105,8 +105,15 @@ public class Cauldron : MonoBehaviour, IInteractable
 
     public void ResetPoisonMenu()
     {
-        foreach (var go in uiPoisonDestroyList) { 
-            Destroy(go); 
+        //to fix a slight timing bug
+        Invoke("RPM_Helper", 0.8f);
+    }
+
+    private void RPM_Helper()
+    {
+        foreach (var go in uiPoisonDestroyList)
+        {
+            Destroy(go);
         }
     }
 

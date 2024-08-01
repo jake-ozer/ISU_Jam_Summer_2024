@@ -15,7 +15,7 @@ MonoBehaviour:
   ingredientName: Chili Powder
   description: Spicy! This when mixed with another spice will wake you up with a
     spicy taste.
-  img: {fileID: 21300000, guid: 3fbf6f2b209aef948a1cf0759cf3533d, type: 3}
+  img: {fileID: 21300000, guid: 7fa150bfc3bf2334587dfdf33b93fd35, type: 3}
   indexNum: 3
   isEffect: 0
   levelReq: 0

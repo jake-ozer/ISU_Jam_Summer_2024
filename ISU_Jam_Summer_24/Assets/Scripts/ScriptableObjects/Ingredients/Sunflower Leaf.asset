@@ -15,7 +15,7 @@ MonoBehaviour:
   ingredientName: Sunflower Leaf
   description: A flower that faces the sun and blooms in the summer. It can be used
     to harness the burning power of the sun
-  img: {fileID: 21300000, guid: 988762913f23e324b930e182f416d918, type: 3}
-  indexNum: 0
+  img: {fileID: 21300000, guid: 6e9301deb7dcb1945ae5f667d886febb, type: 3}
+  indexNum: 12
   isEffect: 0
   levelReq: 0
