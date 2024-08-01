@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d1010e0ad99f774ba55613fafb75618, type: 3}
-  m_Name: DamagePoison
+  m_Name: NullWake3
   m_EditorClassIdentifier: 
-  poisonName: Toxic Poison
-  description: hurts people idk
+  poisonName: null
+  description: 
   ingredientList:
-  - {fileID: 11400000, guid: 85937058539e16d4b96def9c298e99df, type: 2}
-  - {fileID: 11400000, guid: ce2bd7d9f2a17c845ae9f1f98def0b5b, type: 2}
-  effectIngredient: {fileID: 11400000, guid: d8f477fc3e98809489cbcdf38a913f52, type: 2}
+  - {fileID: 11400000, guid: 250ce040b43ab324d847adf87f88aaf6, type: 2}
+  - {fileID: 11400000, guid: 662bf860568271a4cafd2c1c9d3ad38e, type: 2}
+  effectIngredient: {fileID: 11400000, guid: 236c60073a5ef0d469bda29731a4d6c1, type: 2}

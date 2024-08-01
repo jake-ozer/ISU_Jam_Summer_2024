@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c22a49892347d2b43af62f22e243ac73, type: 3}
-  m_Name: Lavender
+  m_Name: Moonsilver Leaf
   m_EditorClassIdentifier: 
-  ingredientName: Lavender
-  description: A fragrant flower with a slightly sweet taste. Often used to relieve
-    stress and insomnia.
-  img: {fileID: 21300000, guid: fe9cde68ca71c95468a4bee9811d1499, type: 3}
+  ingredientName: Moonsilver Leaf
+  description: A leaf from the moonsilver plant, a silver-blue succulent that dwells
+    in the desert. Can harness the power of the moon to cool the world in the right
+    circumstances and also has strange effects when used on monsters.
+  img: {fileID: 0}
   indexNum: 0
   isEffect: 0
   levelReq: 0
