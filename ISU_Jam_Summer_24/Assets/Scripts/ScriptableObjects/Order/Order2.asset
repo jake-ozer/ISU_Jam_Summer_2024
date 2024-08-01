@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredEffects:
   - {fileID: 11400000, guid: d8f477fc3e98809489cbcdf38a913f52, type: 2}
-  orderContent: 'Underground hermit,\n Rumors have been spreading of a local party
-    of dungeoneers pillaging local settlements. We are worried we are unprepared.
+  orderContent: 'Underground hermit,<br><br>Rumors have been spreading of a local
+    party of dungeoneers pillaging local settlements. We are worried we are unprepared.
     A village elder suggested we seek your services. We will not be able to face
-    them in a straight-up fight. We will try to persuade them to accept a courtesy
-    drink. Fill it with poison. We have lots of gold to offer.\n Best,\n Dungeon
+    them in a straight-up fight.<br><br>We will try to persuade them to accept a
+    courtesy drink. Fill it with poison. We have lots of gold to offer.<br><br>Best,<br>Dungeon
     Goblin '

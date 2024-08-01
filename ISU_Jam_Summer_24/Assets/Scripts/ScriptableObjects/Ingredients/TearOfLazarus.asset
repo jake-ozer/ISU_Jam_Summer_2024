@@ -15,7 +15,7 @@ MonoBehaviour:
   ingredientName: Tear of Lazarus
   description: The extract of a mystical plant. Used in healing processes it is the
     bane of all the undead
-  img: {fileID: 0}
+  img: {fileID: 21300000, guid: 5b25e6481d26bc34984ae385b0acf264, type: 3}
   indexNum: 0
   isEffect: 0
   levelReq: 0

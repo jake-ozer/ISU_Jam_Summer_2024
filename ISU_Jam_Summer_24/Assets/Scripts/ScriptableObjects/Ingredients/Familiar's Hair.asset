@@ -16,7 +16,7 @@ MonoBehaviour:
   description: "Taken from a witch\u2019s familiar, a spiritual guardian commonly
     manifesting as a small animal, such as a cat. Usefull in working with animals
     and binding others to your will."
-  img: {fileID: 0}
+  img: {fileID: 21300000, guid: ea5c6351204928d4cb29701a8adced7c, type: 3}
   indexNum: 0
   isEffect: 0
   levelReq: 0
