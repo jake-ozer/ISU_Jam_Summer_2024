@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d1010e0ad99f774ba55613fafb75618, type: 3}
-  m_Name: New Poison Recipe
+  m_Name: NullSunMoon
   m_EditorClassIdentifier: 
   poisonName: NullSunMoon
   description: 
