@@ -40,7 +40,7 @@ public class PortalColor : MonoBehaviour
         {
             portalText.GetComponent<TextMeshProUGUI>().text = "Recieved Poorly.<br>Try again with a better poison.";
         }
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(7f);
         portalText.SetActive(false);
     }
 

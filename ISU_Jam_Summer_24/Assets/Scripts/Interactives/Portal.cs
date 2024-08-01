@@ -6,6 +6,7 @@ public class Portal : MonoBehaviour, IInteractable
 {
     public bool canInteract => interactable;
     private bool interactable = false;
+    public AudioClip portalSound;
 
     public void Interact()
     {
@@ -16,6 +17,7 @@ public class Portal : MonoBehaviour, IInteractable
             FindObjectOfType<OrderManager>().checkOrder();
             pm.DropItem();
             FindObjectOfType<Cauldron>().interactable = true;
+            GetComponent<AudioSource>().PlayOneShot(portalSound);
         }
     }
 
