@@ -8,6 +8,7 @@ public class Mailbox : MonoBehaviour, IInteractable
     public TextMeshProUGUI orderText;
     public GameObject orderLetter;
     public GameObject playerObject;
+    public AudioClip letterSound;
 
     public bool canInteract => true;
 
@@ -25,6 +26,7 @@ public class Mailbox : MonoBehaviour, IInteractable
         playerObject.GetComponent<PlayerInteract>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        GetComponent<AudioSource>().PlayOneShot(letterSound);
     }
 
     public void DisableOrderLetter()

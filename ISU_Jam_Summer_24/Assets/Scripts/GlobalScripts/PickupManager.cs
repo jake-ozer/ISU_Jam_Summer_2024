@@ -7,6 +7,8 @@ public class PickupManager : MonoBehaviour
 {
     public TextMeshProUGUI notifText;
     public IPickup curItem;
+    public AudioClip ingredientPickupSound;
+    public AudioSource cameraAudioSource;
 
     //ONLY UPDATES ITEM if not currently holding one
     public void UpdateItemHeld(IPickup item)
@@ -18,6 +20,7 @@ public class PickupManager : MonoBehaviour
             {
                 notifText.gameObject.SetActive(true);
                 notifText.text = "You are holding " + ingredient.type.ingredientName + ". Press f to drop";
+                cameraAudioSource.PlayOneShot(ingredientPickupSound);
             }
         }
     }

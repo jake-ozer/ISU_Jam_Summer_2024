@@ -22,6 +22,10 @@ public class Cauldron : MonoBehaviour, IInteractable
     public bool canInteract { get => interactable; }
     public bool interactable = true;
 
+    //sound
+    public AudioClip ingredientDropSound;
+    public AudioClip boilSound;
+
     private void Start()
     {
         ingredients = new List<IngredientType>();
@@ -38,6 +42,7 @@ public class Cauldron : MonoBehaviour, IInteractable
         //if ingredient, add it to pot, otherwise start boiling
         if (FindObjectOfType<PickupManager>().curItem is Ingredient curIngredient)
         {
+            GetComponent<AudioSource>().PlayOneShot(ingredientDropSound);
             ingredients.Add(curIngredient.type);
             ingredients.Add(curIngredient.type);
             var ingText = Instantiate(ingTextPrefab);
@@ -60,19 +65,10 @@ public class Cauldron : MonoBehaviour, IInteractable
 
     private void BoilCauldron()
     {
-        //check if ingredients in cauldron do make a poison
-        /*PoisonRecipe curRecipe = FindObjectOfType<RecipeManager>().ValidateRecipe(ingredients);
-        if (curRecipe != null)
-        {
-            Instantiate(poisonBottle, bottleSpawn);
-        }
-        else
-        {
-            Debug.Log("You did not make a poison with a predefined recipe.");
-        }*/
-        //Now will make potion of anything
+        //make potion of anything
         if(ingredients.Count!=0)
         {
+            GetComponent<AudioSource>().PlayOneShot(boilSound);
             Instantiate(poisonBottle, bottleSpawn);
             finalEffects = FindObjectOfType<RecipeManager>().getPoisonEffects(brewParts);
             //update poison menu with final effects

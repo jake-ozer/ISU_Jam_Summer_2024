@@ -22,6 +22,9 @@ public class BookManager : MonoBehaviour
     //page trackers
     private int curPairIndex = 0;
 
+    //sound
+    public AudioClip pageTurnSound;
+
     private void Update()
     {
         //page one
@@ -43,6 +46,7 @@ public class BookManager : MonoBehaviour
         if(curPairIndex < pageContents.Count - 2)
         {
             curPairIndex += 2;
+            Camera.main.gameObject.GetComponent<AudioSource>().PlayOneShot(pageTurnSound);
         }
     }
 
@@ -51,6 +55,7 @@ public class BookManager : MonoBehaviour
         if(curPairIndex >= 2)
         {
             curPairIndex -= 2;
+            Camera.main.gameObject.GetComponent<AudioSource>().PlayOneShot(pageTurnSound);
         }
     }
 
