@@ -13,6 +13,7 @@ public class PlayerInteract : MonoBehaviour
     public bool hasInteracted = false;
     public GameObject cauldronMenu;
     public GameObject ingredientLabel;
+    public GameObject poisonMenu;
 
     private void Start()
     {
@@ -55,6 +56,16 @@ public class PlayerInteract : MonoBehaviour
                     {
                         ingredientLabel.SetActive(false);
                     }
+
+                    //enable poison menu
+                    if (hitObject.GetComponent<PoisonBottle>())
+                    {
+                        poisonMenu.SetActive(true);
+                    }
+                    else
+                    {
+                        poisonMenu.SetActive(false);
+                    }
                 }
             }
 
@@ -66,6 +77,7 @@ public class PlayerInteract : MonoBehaviour
                 hasInteracted = false;
                 cauldronMenu.SetActive(false);
                 ingredientLabel.SetActive(false);
+                poisonMenu.SetActive(false);
             }
             
             //click to interact

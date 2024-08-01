@@ -10,6 +10,8 @@ public class OrderManager : MonoBehaviour
     public int level;
     public List<IngredientType> order;
     public TMP_Text orderGiven;
+    public List<Order> orderSequence;
+    private int curOrderIndex = 0;
 
     // Start is called before the first frame update
     void Awake()
@@ -39,7 +41,9 @@ public class OrderManager : MonoBehaviour
 
     public void getOrder()
     {
-        if(order.Count == 0)
+        orderGiven.text = orderSequence[curOrderIndex].orderContent;
+
+       /* if(order.Count == 0)
         {
             int maxLoops = 100;
             int loop=0;
@@ -73,10 +77,10 @@ public class OrderManager : MonoBehaviour
                 orderLevel+=effects[inputEffect].levelReq;
                 loop2+=1;
             }
-        }
-        string orderMessage = "Dear Merchant,\nI would like a ";
+        }*/
+        /*string orderMessage = "Dear Merchant,\nI would like a ";
         //int randomNum = Random.Range(0,3);
-        /*switch(randomNum)
+        *//*switch(randomNum)
         {
             case 0:
             orderMessage+=""
@@ -84,14 +88,14 @@ public class OrderManager : MonoBehaviour
 
             default:
             break;
-        }*/
+        }*//*
         foreach(IngredientType effect in order)
         {
             orderMessage += effect.ingredientName + " ";
         }
         orderMessage+="poison";
 
-        orderGiven.text = orderMessage;
+        orderGiven.text = orderMessage;*/
 
         Debug.Log("Order is Given");
     }
@@ -101,7 +105,7 @@ public class OrderManager : MonoBehaviour
         List<IngredientType> potionEffectsIn = FindObjectOfType<Cauldron>().getFinalEffects();
         if(order.All(i => potionEffectsIn.Contains(i)))
         {
-            level+=1;
+            //level+=1;
             Debug.Log("Correct Poison");
         }
         else

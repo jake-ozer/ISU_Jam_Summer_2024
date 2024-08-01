@@ -15,7 +15,9 @@ public class Cauldron : MonoBehaviour, IInteractable
     public GameObject menuBack;
     public GameObject ingTextPrefab;
     private List<GameObject> uiDestroyList;
-
+    //poison menu UI
+    public GameObject poisonMenuBack;
+    private List<GameObject> uiPoisonDestroyList;
 
     public bool canInteract { get => interactable; }
     public bool interactable = true;
@@ -25,6 +27,7 @@ public class Cauldron : MonoBehaviour, IInteractable
         ingredients = new List<IngredientType>();
         brewParts = new List<IngredientType>();
         uiDestroyList = new List<GameObject>();
+        uiPoisonDestroyList = new List<GameObject>();
     }
 
     public void Interact()
@@ -72,6 +75,24 @@ public class Cauldron : MonoBehaviour, IInteractable
         {
             Instantiate(poisonBottle, bottleSpawn);
             finalEffects = FindObjectOfType<RecipeManager>().getPoisonEffects(brewParts);
+            //update poison menu with final effects
+            if(finalEffects.Count == 0)
+            {
+                var poisonText = Instantiate(ingTextPrefab);
+                poisonText.GetComponent<TextMeshProUGUI>().text = "No effects";
+                poisonText.transform.parent = poisonMenuBack.transform;
+                uiPoisonDestroyList.Add(poisonText);
+            }
+            else
+            {
+                foreach (var effect in finalEffects)
+                {
+                    var poisonText = Instantiate(ingTextPrefab);
+                    poisonText.GetComponent<TextMeshProUGUI>().text = effect.ingredientName;
+                    poisonText.transform.parent = poisonMenuBack.transform;
+                    uiPoisonDestroyList.Add(poisonText);
+                }
+            }    
         }
         EmptyCauldron();
     }
@@ -84,7 +105,13 @@ public class Cauldron : MonoBehaviour, IInteractable
         {
             Destroy(go);
         }
+    }
 
+    public void ResetPoisonMenu()
+    {
+        foreach (var go in uiPoisonDestroyList) { 
+            Destroy(go); 
+        }
     }
 
     //checks to see what should be combined and then repaces them out with the output effect
