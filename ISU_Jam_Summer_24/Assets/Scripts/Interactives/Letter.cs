@@ -18,11 +18,11 @@ public class Letter : Interactable
       
     }
 
-    public override void Interact()
+    /*public override void Interact()
     {
         Debug.Log("you interacted with a letter");
         canvas.SetActive(true);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true; 
-    }
+    }*/
 }
