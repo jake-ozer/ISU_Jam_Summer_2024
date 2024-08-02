@@ -19,7 +19,7 @@ public class PickupManager : MonoBehaviour
             if (curItem is Ingredient ingredient)
             {
                 notifText.gameObject.SetActive(true);
-                notifText.text = "You are holding " + ingredient.type.ingredientName + ". Press f to drop";
+                notifText.text = "You are holding " + ingredient.type.ingredientName + ". Press f to discard";
                 cameraAudioSource.PlayOneShot(ingredientPickupSound);
             }
         }

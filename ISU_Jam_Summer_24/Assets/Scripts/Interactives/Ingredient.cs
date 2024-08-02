@@ -11,7 +11,6 @@ public class Ingredient : MonoBehaviour, IInteractable, IPickup
 
     public void Interact()
     {
-        //Debug.Log("You touched " + type.ingredientName);
         FindObjectOfType<PickupManager>().UpdateItemHeld(this);
     }
 
