@@ -26,6 +26,10 @@ public class Cauldron : MonoBehaviour, IInteractable
     public AudioClip ingredientDropSound;
     public AudioClip boilSound;
 
+    //cauldron constraint patch
+    public TextMeshProUGUI cauldronMenuTitleText;
+    private int ingCount = 0;
+
     private void Start()
     {
         ingredients = new List<IngredientType>();
@@ -42,6 +46,7 @@ public class Cauldron : MonoBehaviour, IInteractable
         //if ingredient, add it to pot, otherwise start boiling
         if (FindObjectOfType<PickupManager>().curItem is Ingredient curIngredient)
         {
+            ingCount++;
             GetComponent<AudioSource>().PlayOneShot(ingredientDropSound);
             ingredients.Add(curIngredient.type);
             ingredients.Add(curIngredient.type);
@@ -55,6 +60,15 @@ public class Cauldron : MonoBehaviour, IInteractable
         else
         {
             BoilCauldron();
+        }
+    }
+
+    private void Update()
+    {
+        //constrain to two
+        if(cauldronMenuTitleText!= null)
+        {
+            cauldronMenuTitleText.text = "Cauldron Contents: " + ingCount + "/2";
         }
     }
 
@@ -74,6 +88,7 @@ public class Cauldron : MonoBehaviour, IInteractable
             {
                 tutMan.EnablePopup();
             }
+            ingCount = 0;
 
             GetComponent<AudioSource>().PlayOneShot(boilSound);
             Instantiate(poisonBottle, bottleSpawn);

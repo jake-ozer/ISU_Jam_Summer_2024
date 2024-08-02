@@ -1049,7 +1049,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -856, y: -72}
-  m_SizeDelta: {x: 70, y: 70}
+  m_SizeDelta: {x: 95, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135173188
 MonoBehaviour:
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.745283, g: 0.2825187, b: 0.26295832, a: 1}
+  m_Color: {r: 0.735849, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6317,7 +6317,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 856, y: -72}
-  m_SizeDelta: {x: 70, y: 70}
+  m_SizeDelta: {x: 95, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &300503097
 MonoBehaviour:
@@ -6388,7 +6388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.745283, g: 0.2825187, b: 0.26295832, a: 1}
+  m_Color: {r: 0.735849, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -35733,8 +35733,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bea95e58b1388f84fae45e84d960b602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xSens: 400
-  ySens: 400
+  xSens: 75
+  ySens: 75
 --- !u!81 &1359993626
 AudioListener:
   m_ObjectHideFlags: 0
@@ -36719,8 +36719,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 179.5848, y: -10}
-  m_SizeDelta: {x: 319.1696, y: 50}
+  m_AnchoredPosition: {x: 219.481, y: -10}
+  m_SizeDelta: {x: 398.962, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1585901523
 MonoBehaviour:
@@ -36742,7 +36742,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cauldron Contents:'
+  m_text: 'Cauldron Contents: 0/2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0bfdbaeb9c278084ab7c2d27b401828f, type: 2}
   m_sharedMaterial: {fileID: 650661873228105782, guid: 0bfdbaeb9c278084ab7c2d27b401828f, type: 2}
@@ -40087,8 +40087,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 187.04, y: -50}
-  m_SizeDelta: {x: 360.2561, y: 60}
+  m_AnchoredPosition: {x: 210.8243, y: -50}
+  m_SizeDelta: {x: 407.8247, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2096113540
 MonoBehaviour:
@@ -40732,6 +40732,7 @@ MonoBehaviour:
   interactable: 1
   ingredientDropSound: {fileID: 8300000, guid: efa4b8ff2cc09ab43951737415120a56, type: 3}
   boilSound: {fileID: 8300000, guid: 148cb80fa9865d94c9be34290924d857, type: 3}
+  cauldronMenuTitleText: {fileID: 1585901523}
 --- !u!65 &1797005765442384085
 BoxCollider:
   m_ObjectHideFlags: 0
