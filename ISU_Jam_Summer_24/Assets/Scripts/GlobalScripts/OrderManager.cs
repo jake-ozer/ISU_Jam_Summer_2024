@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class OrderManager : MonoBehaviour
 {
@@ -32,6 +33,12 @@ public class OrderManager : MonoBehaviour
             Debug.Log("Correct Poison");
             FindObjectOfType<PortalColor>().CorrectPoisonAnim();
             curOrderIndex++;
+
+            //end game logic
+            if(curOrderIndex >= orderSequence.Count) 
+            {
+                SceneManager.LoadScene(2);
+            }
         }
         else
         {

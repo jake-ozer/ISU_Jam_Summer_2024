@@ -37,5 +37,12 @@ public class Mailbox : MonoBehaviour, IInteractable
         playerObject.GetComponent<PlayerInteract>().enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        //tutorial message
+        var tutMan = FindObjectOfType<TutorialManager>();
+        if (tutMan.mesIndex == 1)
+        {
+            tutMan.EnablePopup();
+        }
     }
 }

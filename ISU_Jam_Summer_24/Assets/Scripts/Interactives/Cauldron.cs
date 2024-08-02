@@ -68,6 +68,13 @@ public class Cauldron : MonoBehaviour, IInteractable
         //make potion of anything
         if(ingredients.Count!=0)
         {
+            //tutorial message
+            var tutMan = FindObjectOfType<TutorialManager>();
+            if (tutMan.mesIndex == 3)
+            {
+                tutMan.EnablePopup();
+            }
+
             GetComponent<AudioSource>().PlayOneShot(boilSound);
             Instantiate(poisonBottle, bottleSpawn);
             finalEffects = FindObjectOfType<RecipeManager>().getPoisonEffects(brewParts);

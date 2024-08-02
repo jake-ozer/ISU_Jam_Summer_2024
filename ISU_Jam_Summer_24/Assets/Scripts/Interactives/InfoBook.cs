@@ -93,5 +93,12 @@ public class InfoBook : MonoBehaviour, IInteractable
         playerObject.GetComponent<PlayerInteract>().enabled = true;
         crosshair.SetActive(true);
         interactable = false;
+
+        //tutorial message
+        var tutMan = FindObjectOfType<TutorialManager>();
+        if (tutMan.mesIndex == 2)
+        {
+            tutMan.EnablePopup();
+        }
     }
 }
