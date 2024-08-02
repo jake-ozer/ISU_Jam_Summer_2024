@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BloodOfBat
   m_EditorClassIdentifier: 
   ingredientName: Blood of Bat
-  description: A bit of beastly blood to better your bewitching brew. Can have a
-    freezing effect when cooled or can help herbs to better heal wounds
+  description: A bit of beastly blood to better your bewitching brew. Can help herbs
+    to better heal wounds.
   img: {fileID: 21300000, guid: 9a9fb6ccf0fcedc4c99603c76be5a72b, type: 3}
   indexNum: 0
   isEffect: 0

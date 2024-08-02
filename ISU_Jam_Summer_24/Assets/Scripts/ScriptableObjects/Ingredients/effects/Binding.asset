@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22a49892347d2b43af62f22e243ac73, type: 3}
   m_Name: Binding
   m_EditorClassIdentifier: 
-  ingredientName: Binding
+  ingredientName: Mind Control
   description: 
   img: {fileID: 0}
-  indexNum: 0
+  indexNum: 18
   isEffect: 1
   levelReq: 0

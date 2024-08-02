@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TearOfLazarus
   m_EditorClassIdentifier: 
   ingredientName: Tear of Lazarus
-  description: The extract of a mystical plant. Used in healing processes it is the
-    bane of all the undead
+  description: The extract of a mystical plant. Used in healing processes, it is
+    the bane of all things undead.
   img: {fileID: 21300000, guid: 626d946a7daeb9a41882e46e74b94a61, type: 3}
   indexNum: 10
   isEffect: 0

@@ -15,9 +15,9 @@ MonoBehaviour:
   desiredEffects:
   - {fileID: 11400000, guid: 880f3552ea41d5c43820b2d4ba5cc95f, type: 2}
   orderContent: "My dear friend,<br><br>Years ago, you served with me during the
-    witching wars. Now, I beg you to rid of my vampire roommate. He has installed
-    curtain blinds in his room, and now he parties insistently while I am trying
-    to sleep. I have approached him, but to no avail. He must go. If possible, ensure
-    that the potion is human-proof, as we have many human servants who live here.
-    It is hard finding people to work here, and I\u2019d hate to lose one.<br><br>Best,<br>Your
-    dearest vampire friend "
+    witching wars. Now, I beg you to rid of my vampire roommate with a poison. He
+    has installed curtain blinds in his room, and now he parties insistently while
+    I am trying to sleep. I have approached him, but to no avail. He must go.<br><br>If
+    possible, ensure that the poison is human-proof, as we have many human servants
+    who live here. It is hard finding people to work here, and I\u2019d hate to lose
+    one.<br><br>Best,<br>Your dearest vampire friend"

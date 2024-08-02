@@ -15,6 +15,6 @@ MonoBehaviour:
   poisonName: Freezing
   description: 
   ingredientList:
-  - {fileID: 11400000, guid: fb90cfdf1fc4a7b45aab2f68da49adee, type: 2}
-  - {fileID: 11400000, guid: 52b5c2cafbffaab4db64374af96e6cbe, type: 2}
+  - {fileID: 11400000, guid: 7358e139940b27046ab4f400681ae06a, type: 2}
+  - {fileID: 11400000, guid: 77c06d345afa6224f9c91d0fc38eaca8, type: 2}
   effectIngredient: {fileID: 11400000, guid: 74ea3ad8230246b4e8e0e7f6b496d983, type: 2}

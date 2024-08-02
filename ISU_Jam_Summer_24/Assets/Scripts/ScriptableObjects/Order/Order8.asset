@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredEffects:
   - {fileID: 11400000, guid: ce713590f1a5e3c48bf1ad1e2a0741c1, type: 2}
-  orderContent: 'Greetings Alchemist,<br><br>I am a reclusive countess living in
-    a grand yet empty castle, and I have found myself wandering the halls at night
+  orderContent: Greetings Alchemist,<br><br>I am a reclusive countess living in a
+    grand yet empty castle, and I have found myself wandering the halls at night
     as of late, wishing for company. I have decided that the best course of action
     is to become a vampire, so that I may lure a curious and fair maiden to my estate
     with my devilish charm and superhuman beauty.<br><br>Unfortunately, I do not
-    know any vampires who can turn me, as I do not have any friends. Perhaps a potion
-    would work instead?<br><br>Sincerely,<br>A Romanian romantic '
+    know any vampires who can turn me, as I do not have any friends. Perhaps a poison
+    would work instead? I heard ingredients with sleeping properties are a good catalyst.<br><br>Sincerely,<br>A
+    Romanian romantic

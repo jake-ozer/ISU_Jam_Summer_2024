@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Chilli Powder
   m_EditorClassIdentifier: 
   ingredientName: Chili Powder
-  description: Spicy! This when mixed with another spice will wake you up with a
-    spicy taste.
+  description: Spicy! When mixed with another spice it will wake you up with a fiery
+    taste.
   img: {fileID: 21300000, guid: 7fa150bfc3bf2334587dfdf33b93fd35, type: 3}
   indexNum: 3
   isEffect: 0

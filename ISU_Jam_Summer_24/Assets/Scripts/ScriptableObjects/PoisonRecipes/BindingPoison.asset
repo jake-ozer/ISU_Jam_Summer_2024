@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1010e0ad99f774ba55613fafb75618, type: 3}
   m_Name: BindingPoison
   m_EditorClassIdentifier: 
-  poisonName: Binding
+  poisonName: Mind Control
   description: 
   ingredientList:
   - {fileID: 11400000, guid: 91b48e1876a709847ac901e13adf3a14, type: 2}
-  - {fileID: 11400000, guid: 7358e139940b27046ab4f400681ae06a, type: 2}
+  - {fileID: 11400000, guid: b229b6d42f8557244b96ce2719474205, type: 2}
   effectIngredient: {fileID: 11400000, guid: 48e5f8b329fa3784a9d8fea13ff3b392, type: 2}

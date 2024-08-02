@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredEffects:
   - {fileID: 11400000, guid: 662bf860568271a4cafd2c1c9d3ad38e, type: 2}
-  orderContent: 'Local alchemist,<br><br>I have recently installed curtains, meaning
-    I can now party during the day! Unfortunately, my vampirical immortality does
-    not protect against sleep deprivation. If I could have something to fix this
-    problem of tiring, I would be delighted. A fellow vampire recommended your work,
-    I hope you can deliver.<br><br>Best,<br>Local vampire '
+  orderContent: "Local alchemist,<br><br>I have recently been put onto the night
+    shift to guard the royal palace. The job isn\u2019t so bad, it is actually quite
+    peaceful most nights. However, staying awake has been by far the biggest struggle
+    with the new position.<br><br>Could you brew a concoction to keep me awake throughout
+    the night? A fellow guard recommended your work, I hope you can deliver.<br><br>Cordially,<br>A
+    member of the Royal Guard"

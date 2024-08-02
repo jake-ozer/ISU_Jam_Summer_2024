@@ -15,8 +15,8 @@ MonoBehaviour:
   desiredEffects:
   - {fileID: 11400000, guid: 747a0e14f1ba66c4385b624549972092, type: 2}
   orderContent: "Dear Alchemist,<br><br>This is it\u2014I\u2019ve reached my final
-    straw. I\u2019ve had a terrible roommate all year long: they never wash the dishes,
-    they leave their trash everywhere, they\u2019re always playing loud music when
-    I\u2019m trying to sleep, and now, they\u2019ve become a werewolf\u2014and I\u2019m
-    allergic to dogs! I can\u2019t stand them\u2014I need a potion to put the dog
-    down, so to speak.<br><br>From,<br>A disgruntled cat lover"
+    straw. I\u2019ve had a terrible neighbor all year long: they leave their trash
+    everywhere, they\u2019re always playing loud music when I\u2019m trying to sleep,
+    and now, they\u2019ve become a werewolf\u2014and I\u2019m allergic to dogs! I
+    can\u2019t stand them\u2014I need a poison to put the dog down, so to speak.<br><br>From,<br>A
+    disgruntled cat lover"

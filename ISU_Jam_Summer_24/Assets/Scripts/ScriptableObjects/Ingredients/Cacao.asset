@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Cacao
   m_EditorClassIdentifier: 
   ingredientName: Cacao
-  description: The edible seeds of a tropical evergreen tree. Used to make chocolate
-    which will melt when heated. Chocolate is also poisonus to dogs
+  description: The edible seeds of a tropical evergreen tree. Used to make irresitible
+    chocolate which will melt when heated. Keep away from dogs, as it is poisonous
+    to them.
   img: {fileID: 21300000, guid: 4c567c65075997440ad763de0b809925, type: 3}
   indexNum: 2
   isEffect: 0

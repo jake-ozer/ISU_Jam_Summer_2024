@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredEffects:
   - {fileID: 11400000, guid: 8451e574bf3a55a43b8b2fdb55ec7b50, type: 2}
-  orderContent: "Alchemist,<br><br>You don\u2019t happen to have a potion that kills
+  orderContent: "Alchemist,<br><br>You don\u2019t happen to have a poison that kills
     the undead, do you? I may have been tampering with dark magic to bring back my
     dead wife, and accidentally raised an army of zombies\u2026 Please send help,
     and quickly. They might be dead already, but I\u2019m not!<br><br>Please hurry,<br>Not

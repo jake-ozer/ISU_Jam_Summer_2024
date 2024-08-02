@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c22a49892347d2b43af62f22e243ac73, type: 3}
-  m_Name: Damage
+  m_Script: {fileID: 11500000, guid: d62abdca1e148304bbd20e85365bd8f6, type: 3}
+  m_Name: Order15
   m_EditorClassIdentifier: 
-  ingredientName: Toxicity
-  description: DO NOT ADD TO BOOK
-  img: {fileID: 0}
-  indexNum: 27
-  isEffect: 1
-  levelReq: 0
+  desiredEffects:
+  - {fileID: 0}
+  orderContent: 

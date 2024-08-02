@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Bonemeal
   m_EditorClassIdentifier: 
   ingredientName: Bonemeal
-  description: its bones and works great as a fertilizer!  Can help people to doze
-    off in the right circumstances
+  description: Dried bones ground to a fine powder. Works great as a fertilizer and
+    can help people to doze off in the right circumstances.
   img: {fileID: 21300000, guid: c6306bf203550584b805c9cc431d47d9, type: 3}
   indexNum: 1
   isEffect: 0
